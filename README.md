@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-UI desig by Julia Nasser (https://dribbble.com/julianasser)
+design by Julia Nasser (https://dribbble.com/julianasser)
 
 ## Getting Started
 
