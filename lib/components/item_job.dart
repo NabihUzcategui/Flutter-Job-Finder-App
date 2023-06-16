@@ -9,10 +9,10 @@ class ItemJob extends StatefulWidget {
   final bool themeDark;
 
   const ItemJob({
-      super.key, 
-      this.themeDark = false,
-      required this.job,
-    });
+    super.key,
+    this.themeDark = false,
+    required this.job,
+  });
 
   @override
   State<ItemJob> createState() => _ItemJobState();
@@ -33,13 +33,8 @@ class _ItemJobState extends State<ItemJob> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _companyLogo(),
-        
-                  _favicon()
-                ],
+                children: [_companyLogo(), _favicon()],
               ),
-
               _infoJobTexts(context),
             ],
           ),
@@ -49,23 +44,20 @@ class _ItemJobState extends State<ItemJob> {
   }
 
   BoxDecoration _boxDecoration() => BoxDecoration(
-    color: widget.themeDark ? kPrimaryColor : Colors.white,
-    borderRadius: BorderRadius.circular(10.0),
-    boxShadow: const [
-      BoxShadow(
-        color: Colors.black45,
-        blurRadius: 10.0,
-        offset: Offset(4.0, 4.0)
-      )
-    ]
-  );
+          color: widget.themeDark ? kPrimaryColor : Colors.white,
+          borderRadius: BorderRadius.circular(10.0),
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black45,
+                blurRadius: 10.0,
+                offset: Offset(4.0, 4.0))
+          ]);
 
   Widget _companyLogo() {
     return Container(
       decoration: BoxDecoration(
-        color: widget.themeDark ? Colors.white : Colors.grey,
-        borderRadius: BorderRadius.circular(10.0)
-      ),
+          color: widget.themeDark ? Colors.white : Colors.grey,
+          borderRadius: BorderRadius.circular(10.0)),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: Image.network(widget.job.company.urlLogo, width: 60.0),
@@ -76,7 +68,7 @@ class _ItemJobState extends State<ItemJob> {
   Widget _favicon() {
     return GestureDetector(
       child: Icon(
-        widget.job.isFavorite ? Icons.favorite : Icons.favorite_border, 
+        widget.job.isFavorite ? Icons.favorite : Icons.favorite_border,
         color: widget.themeDark ? Colors.white : Colors.grey,
       ),
       onTap: () {
@@ -91,19 +83,35 @@ class _ItemJobState extends State<ItemJob> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(widget.job.company.name, style: TextStyle(fontSize: 15.0, color: widget.themeDark ? const Color(0xffb7b7d2) : Colors.grey ),),
-        Text(widget.job.role, style: widget.themeDark ? kHeadLine3 : kHeadLine4 ),
-        const SizedBox(height: 5.0,),
+        Text(
+          widget.job.company.name,
+          style: TextStyle(
+              fontSize: 15.0,
+              color: widget.themeDark ? const Color(0xffb7b7d2) : Colors.grey),
+        ),
+        Text(widget.job.role,
+            style: widget.themeDark ? kHeadLine3 : kHeadLine4),
+        const SizedBox(
+          height: 5.0,
+        ),
         Row(
           children: [
-            Icon(Icons.location_on, color: widget.themeDark ? const Color(0xffb7b7d2) : Colors.grey, size: 15.0,),
-            const SizedBox( width: 5.0,),
-            Text(widget.job.location, style: const TextStyle( fontSize: 15.0, color: Color(0xffb7b7d2) ),)
+            Icon(
+              Icons.location_on,
+              color: widget.themeDark ? const Color(0xffb7b7d2) : Colors.grey,
+              size: 15.0,
+            ),
+            const SizedBox(
+              width: 5.0,
+            ),
+            Text(
+              widget.job.location,
+              style: const TextStyle(fontSize: 15.0, color: Color(0xffb7b7d2)),
+            )
           ],
         )
       ],
     );
-
   }
 }
 
