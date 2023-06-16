@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+![JobFinderImages](https://github.com/NabihUzcategui/Flutter-Job-Finder-App/assets/99839506/b55c87b9-dc1d-408e-9110-d9861791c937)
+
+
+design by Julia Nasser (https://dribbble.com/julianasser)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
