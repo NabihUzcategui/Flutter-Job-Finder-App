@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,24 +12,26 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: () {}, 
+            onPressed: () {
+              Navigator.popAndPushNamed(context, 'splash');
+            },
             icon: SvgPicture.asset('assets/icons/slider.svg'),
             iconSize: 40.0,
           ),
           Row(
             children: [
               IconButton(
-                onPressed: () {}, 
+                onPressed: () {},
                 icon: SvgPicture.asset('assets/icons/search.svg'),
                 iconSize: 40.0,
               ),
               IconButton(
-                onPressed: () {}, 
+                onPressed: () {},
                 icon: SvgPicture.asset('assets/icons/settings.svg'),
                 iconSize: 40.0,
               ),
             ],
-          ),          
+          ),
         ],
       ),
     );

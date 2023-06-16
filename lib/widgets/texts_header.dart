@@ -11,9 +11,15 @@ class TextsHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Hi Nabih', style: kBodyText,),
+          Text(
+            'Hi Nabih',
+            style: kBodyText1,
+          ),
           Text('Find your job', style: kHeadLine1),
-          Text('desing job', style: kHeadLine2,),
+          Text(
+            'desing job',
+            style: kHeadLine2,
+          ),
         ],
       ),
     );

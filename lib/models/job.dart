@@ -6,11 +6,13 @@ class Job {
   String location;
   String role;
   Company company;
+  bool isFavorite = false;
   
   Job({
     required this.location,
     required this.role,
     required this.company,
+    required this.isFavorite,
   });
 
   

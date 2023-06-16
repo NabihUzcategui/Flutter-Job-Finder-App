@@ -9,19 +9,17 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: const [
-
-            CustomAppBar(),
-
-            TextsHeader(),
-
-            ForYou(),
-
-          ],
-        )
-      ),
+          child: ListView(
+        children: [
+          const CustomAppBar(),
+          const TextsHeader(),
+          ForYou(),
+          Recent(),
+          const SizedBox(
+            height: 50.0,
+          )
+        ],
+      )),
     );
   }
 }
-
